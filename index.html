@@ -1,1 +1,136 @@
-Hello, World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Development Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+        nav {
+            background-color: #444;
+            color: #fff;
+            padding: 0.5rem;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        section {
+            margin: 20px 0;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .game-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .game-item {
+            width: 200px;
+            margin: 10px;
+            text-align: center;
+        }
+        .game-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Development Portfolio</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#ideas">Ideas</a></li>
+            <li><a href="#games">Game Gallery</a></li>
+            <li><a href="#projects">Projects</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hello! I'm a passionate developer with interests in game development, web technologies, and innovative software solutions. I love creating engaging and interactive experiences through code.</p>
+        </section>
+
+        <section id="ideas">
+            <h2>Current Ideas & Concepts</h2>
+            <ul>
+                <li>Multiplayer Strategy Game Concept</li>
+                <li>Interactive Learning Platform</li>
+                <li>AI-Powered Personal Assistant</li>
+                <li>Augmented Reality Mobile Game</li>
+            </ul>
+        </section>
+
+        <section id="games" class="game-gallery">
+            <div class="game-item">
+                <h3>Space Shooter</h3>
+                <img src="/api/placeholder/200/200" alt="Space Shooter Game">
+                <p>A retro-style space shooting game</p>
+            </div>
+            <div class="game-item">
+                <h3>Puzzle Adventure</h3>
+                <img src="/api/placeholder/200/200" alt="Puzzle Adventure Game">
+                <p>Challenging puzzle game with unique mechanics</p>
+            </div>
+            <div class="game-item">
+                <h3>RPG Prototype</h3>
+                <img src="/api/placeholder/200/200" alt="RPG Game Prototype">
+                <p>Role-playing game in early development</p>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Main Projects</h2>
+            <div>
+                <h3>Project 1: Web Development Dashboard</h3>
+                <p>A comprehensive dashboard for tracking web development metrics and performance.</p>
+                <a href="#">View Project Details</a>
+            </div>
+            <div>
+                <h3>Project 2: Machine Learning Classifier</h3>
+                <p>An advanced machine learning model for image classification using neural networks.</p>
+                <a href="#">View Project Details</a>
+            </div>
+        </section>
+    </div>
+
+    <footer style="background-color: #333; color: #fff; text-align: center; padding: 1rem;">
+        <p>© 2024 My Development Portfolio | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
