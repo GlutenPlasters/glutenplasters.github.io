@@ -5,12 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Development Portfolio</title>
     <style>
+        :root {
+            /* Sci-Fi Forest Color Palette */
+            --deep-forest-green: #1A392A;      /* Dark, rich forest base */
+            --moss-tech-green: #2D5C3E;        /* Slightly brighter green with tech feel */
+            --pine-circuit-green: #3E8E5F;     /* Midtone green with circuit-board hint */
+            --misty-sage: #6B9080;             /* Soft, technological sage */
+            --cybernetic-teal: #A4C2A5;        /* Light, techy teal-green */
+            --holographic-accent: #C3DDCA;     /* Light, almost holographic green */
+            --mountain-mist-gray: #E9F5E9;     /* Very light, misty background */
+            --neon-forest-highlight: #00FF9C;  /* Bright neon green accent */
+        }
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: var(--mountain-mist-gray);
+            color: var(--deep-forest-green);
         }
         .container {
             width: 80%;
@@ -19,14 +31,14 @@
             padding: 20px;
         }
         header {
-            background-color: #333;
-            color: #fff;
+            background-color: var(--deep-forest-green);
+            color: var(--holographic-accent);
             text-align: center;
             padding: 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         nav {
-            background-color: #444;
-            color: #fff;
+            background-color: var(--moss-tech-green);
             padding: 0.5rem;
         }
         nav ul {
@@ -39,15 +51,20 @@
             margin: 0 15px;
         }
         nav ul li a {
-            color: #fff;
+            color: var(--holographic-accent);
             text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: var(--neon-forest-highlight);
         }
         section {
             margin: 20px 0;
-            background-color: #fff;
+            background-color: white;
             padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(45, 92, 62, 0.1);
+            border-left: 5px solid var(--pine-circuit-green);
         }
         .game-gallery {
             display: flex;
@@ -58,26 +75,39 @@
             width: 200px;
             margin: 10px;
             text-align: center;
+            background-color: var(--misty-sage);
+            border-radius: 8px;
+            padding: 10px;
+            transition: transform 0.3s ease;
+        }
+        .game-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         .game-item img {
             max-width: 100%;
             height: auto;
             border-radius: 5px;
-        }
-        .resume-section {
-            text-align: center;
+            filter: saturate(120%) contrast(110%);
         }
         .download-btn {
             display: inline-block;
-            background-color: #333;
-            color: #fff;
+            background-color: var(--pine-circuit-green);
+            color: var(--mountain-mist-gray);
             padding: 10px 20px;
             text-decoration: none;
             border-radius: 5px;
-            transition: background-color 0.3s ease;
+            transition: all 0.3s ease;
         }
         .download-btn:hover {
-            background-color: #555;
+            background-color: var(--neon-forest-highlight);
+            color: var(--deep-forest-green);
+        }
+        footer {
+            background-color: var(--deep-forest-green);
+            color: var(--cybernetic-teal);
+            text-align: center;
+            padding: 1rem;
         }
     </style>
 </head>
@@ -99,16 +129,16 @@
     <div class="container">
         <section id="about">
             <h2>About Me</h2>
-            <p>Hello, I'm Andrew! I'm a self-taught game and app developer. I specialize in using Unity, Xcode. I'm learning Unreal.  </p>
+            <p>Hello! I'm a passionate developer exploring the intersection of natural landscapes and technological innovation. My work blends organic inspiration with cutting-edge digital experiences.</p>
         </section>
 
         <section id="ideas">
             <h2>Current Ideas & Concepts</h2>
             <ul>
-                <li>Multiplayer Strategy Game Concept</li>
-                <li>Interactive Learning Platform</li>
-                <li>AI-Powered Personal Assistant</li>
-                <li>Augmented Reality Mobile Game</li>
+                <li>Eco-Tech Multiplayer Strategy Game</li>
+                <li>Biomimetic Learning Platform</li>
+                <li>Forest-Inspired AI Assistant</li>
+                <li>Augmented Reality Nature Exploration Game</li>
             </ul>
         </section>
 
@@ -116,46 +146,46 @@
             <div class="game-item">
                 <h3>Space Shooter</h3>
                 <img src="/api/placeholder/200/200" alt="Space Shooter Game">
-                <p>A retro-style space shooting game</p>
+                <p>A retro-style space shooting game with organic UI</p>
             </div>
             <div class="game-item">
                 <h3>Puzzle Adventure</h3>
                 <img src="/api/placeholder/200/200" alt="Puzzle Adventure Game">
-                <p>Challenging puzzle game with unique mechanics</p>
+                <p>Nature-inspired puzzle mechanics</p>
             </div>
             <div class="game-item">
                 <h3>RPG Prototype</h3>
                 <img src="/api/placeholder/200/200" alt="RPG Game Prototype">
-                <p>Role-playing game in early development</p>
+                <p>Ecological world-building RPG</p>
             </div>
         </section>
 
         <section id="projects">
             <h2>Main Projects</h2>
             <div>
-                <h3>Project 1: Web Development Dashboard</h3>
-                <p>A comprehensive dashboard for tracking web development metrics and performance.</p>
+                <h3>Project 1: Eco-Tech Dashboard</h3>
+                <p>A comprehensive dashboard tracking sustainability and technological metrics.</p>
                 <a href="#">View Project Details</a>
             </div>
             <div>
-                <h3>Project 2: Machine Learning Classifier</h3>
-                <p>An advanced machine learning model for image classification using neural networks.</p>
+                <h3>Project 2: Biomimetic ML Classifier</h3>
+                <p>Machine learning model inspired by natural neural networks.</p>
                 <a href="#">View Project Details</a>
             </div>
         </section>
 
-        <section id="resume">
+        <section id="resume" class="resume-section">
             <h2>Resume</h2>
-            <p>Download my latest resume to learn more about my professional experience and skills.</p>
-            <a href="./arm-polished-resume.pdf" class="download-btn" download>
+            <p>Download my latest resume to explore my journey through technology and creativity.</p>
+            <a href="arm-polished-resume.pdf" class="download-btn" download>
                 Download Resume (PDF)
             </a>
             <p><small>Last updated: December 2024</small></p>
         </section>
     </div>
 
-    <footer style="background-color: #333; color: #fff; text-align: center; padding: 1rem;">
-        <p>© 2024 My Development Portfolio | All Rights Reserved</p>
+    <footer>
+        <p>© 2024 Eco-Digital Development Portfolio | Inspired by Nature's Code</p>
     </footer>
 </body>
 </html>
