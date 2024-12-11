@@ -39,10 +39,9 @@
                 <h3>Video of basic Implimentation</h3>
                 <h5>"Shout"</h5>
                 <p>"Shout" is command that will identify interactable NPCs in the area.</p>
-                <video width="640" height="480" controls>
-                    <source src="commandline-rpg-mechanic-page/videos/commandline-mechanics-video-draft.mov" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+                <iframe width="640" height="480"
+                    src="https://youtu.be/uaoTL22BDb4">
+                </iframe>
 
                 <h5>"Sense</h5>
                 <p>"Sense" is a function that will identify interactable items in the area.</p>
@@ -50,6 +49,23 @@
                     <source src="commandline-rpg-mechanic-page/videos/commandline-mechanics-video-draft-items.mov" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
+            </section>
+
+            <section>
+                <h3>More Data to Interact with</h3>
+                <p>So far, the basic mechanism of the commandline works. It can issue commands to the `InteractionDispatch`, which will return data that can be drawn on the HUD.</p>
+                <p>There is an issue, however. Currently, there is no intrinsic data stored within the NPCs nor the items. Right now, getting a reference to an NPC or an interaction item is similar to being handed a piece of blank paper and being told that it's an apple. There is no data attached to it for the player to work with. All of this means that there is no discovery. So, I need to make some properties, create some classes that can be passed around simply and easily, and, finally, do something with these data.</p>
+                <p>To re-iterate, the whole point of the idea is to create a text-based adventure mechanism on top of a 3D RPG. Thinking about traditional text-based adventures, I've come up with a few commands - 
+                    "examine", "inspect", "look at",
+                    "use", "interact with",
+                    "pick up", "grab", "take",
+                    "drop", "discard"
+                What is the point of this mechanic if I could go over to an object, point at it with my player controller and press E to pick it up? Going about it via a text command prompt seems like alot more work and in the end it would end up entailing pressing tab to cycle through the command options, which whould very quickly worse than clicking the mouse button. 
+                </p>
+                <p>Some solutions could be similar to using the army command hot keys that are in Mount & Blade game series. For example, the digits will select different parts of the army, and the F keys will command your army to do differen things, like charge, or organize themselves into a skien formation, then charge, or wait, or hold their fire, etc.</p>
+                <p>Perhaps, players could use a hot key to program their favorite and most useful commands into their quick access (similar to placing items from a chest into your backpack so that they can be used at a moment's notice.</p>
+                <p>So this means that some data needs to represent something simiar to an 'isFavorited' property.</p>
+                
             </section>
 
 
